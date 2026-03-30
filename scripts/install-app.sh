@@ -21,7 +21,7 @@ mkdir -p "$APP_DIR/Contents/MacOS" "$APP_DIR/Contents/Resources"
 cp "$BIN_DIR/$APP_NAME" "$APP_DIR/Contents/MacOS/$APP_NAME"
 cp "$ROOT_DIR/Resources/Info.plist" "$APP_DIR/Contents/Info.plist"
 find "$ROOT_DIR/Resources" -mindepth 1 -maxdepth 1 ! -name 'Info.plist' -exec cp -R {} "$APP_DIR/Contents/Resources/" \;
-cp "$ROOT_DIR/OpenAI-logos(new)/PNGs/OpenAI-white-monoblossom.png" "$APP_DIR/Contents/Resources/OpenAI-white-monoblossom.png"
+cp "$ROOT_DIR/OpenAI-logos(new)/PNGs/OpenAI-white-monoblossom.png" "$APP_DIR/Contents/Resources/OpenAI-white-monoblossom.png" 2>/dev/null || true
 
 chmod +x "$APP_DIR/Contents/MacOS/$APP_NAME"
 codesign --force --deep --sign - "$APP_DIR" >/dev/null 2>&1 || true

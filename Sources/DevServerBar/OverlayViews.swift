@@ -499,7 +499,7 @@ private final class AppIconCache {
             .deletingLastPathComponent()
             .deletingLastPathComponent()
             .deletingLastPathComponent()
-            .appendingPathComponent("OpenAI-logos(new)/PNGs/OpenAI-white-monoblossom.png")
+            .appendingPathComponent("Resources/OpenAI-white-monoblossom.png")
 
         if let image = NSImage(contentsOf: workspaceURL) {
             return image
